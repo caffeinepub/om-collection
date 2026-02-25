@@ -1,0 +1,70 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Product Catalogue with Upload & Rates Management - Frontend",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Build a Catalogue page displaying all products in a responsive grid with filter/sort controls by category",
+      "acceptanceCriteria": [
+        "All products fetched from the backend are displayed in a card grid.",
+        "Each card shows product image, name, category, and price (₹).",
+        "Filtering by category (All, Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear) works correctly.",
+        "Layout is responsive across mobile, tablet, and desktop.",
+        "Visual theme matches the existing saffron/gold and maroon palette."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Catalogue.tsx",
+          "operation": "create",
+          "description": "Create Catalogue page component that fetches products using backend.getProducts() and displays them in a responsive grid. Include category filter buttons (All, Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear) that filter the displayed products. Each product card must show the image (using imageUrl field), name, category badge, and price formatted as ₹{price}. Use the generated placeholder images (frontend/public/assets/generated/mens-wear.dim_400x400.png, frontend/public/assets/generated/womens-wear.dim_400x400.png, frontend/public/assets/generated/kids-wear.dim_400x400.png, frontend/public/assets/generated/ethnic-wear.dim_400x400.png) as fallback images if imageUrl is empty. Apply warm saffron/gold and maroon theme colors consistent with existing design. Ensure responsive grid layout using Tailwind classes (grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4)."
+        },
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "create",
+          "description": "Create reusable ProductCard component that accepts a Product prop (matching the backend Product interface). Display product image with fallback handling, product name as heading, category as a styled badge (map category enum values to display labels: mensWear → Men's Wear, womensWear → Women's Wear, kidsWear → Kids' Wear, ethnicWear → Traditional/Ethnic Wear), and price formatted as ₹{price}. Style with card shadow, rounded corners, and hover effects using the saffron/gold and maroon color palette from the existing theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "summary": "Add an Admin Upload page with a form to add new products with client-side validation",
+      "acceptanceCriteria": [
+        "Upload form is accessible from the navigation bar (e.g., 'Add Product' link).",
+        "All required fields are present: Name, Category, Price, Image URL, Description.",
+        "Submitting a valid form calls the backend and adds the product.",
+        "The catalogue reflects the newly uploaded product without a full page reload.",
+        "Validation errors are shown inline if required fields are empty or price is invalid.",
+        "Success confirmation message is displayed after a successful upload."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AddProduct.tsx",
+          "operation": "create",
+          "description": "Create AddProduct page component with a form containing fields: Product Name (text input), Category (dropdown with options: Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear mapping to Category enum values), Price in ₹ (numeric input), Image URL (text input), and Description (textarea). Implement client-side validation: all fields required, price must be a positive number. On form submission, call backend.addProduct(name, category, price, imageUrl, description) and show success message. Include error handling for failed submissions. After successful upload, optionally redirect to /catalogue or show a success message with a link to view the catalogue. Style form inputs and buttons consistently with the existing saffron/gold and maroon theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add navigation links to the Catalogue and Add Product pages in the existing responsive navigation bar",
+      "acceptanceCriteria": [
+        "A 'Catalogue' link appears in the navigation bar.",
+        "Clicking the link navigates to the Catalogue page.",
+        "The navigation bar remains responsive and correctly styled on all screen sizes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route definitions for /catalogue (rendering Catalogue page) and /add-product (rendering AddProduct page) to the React Router configuration. Import the Catalogue and AddProduct page components. Ensure routes are properly registered in the Routes component."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Add two new navigation links to the existing navigation bar: 'Catalogue' linking to /catalogue and 'Add Product' linking to /add-product. Place them alongside the existing Home, Collections, About, and Contact links. Ensure the navigation bar remains responsive and styled consistently with the existing saffron/gold and maroon theme on all screen sizes (mobile, tablet, desktop). The mobile menu should include the new links as well."
+        }
+      ]
+    }
+  ]
+}

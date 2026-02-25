@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Website for OM COLLECTION, a cloth business located in Baramkela, Chhattisgarh, India (PIN: 496551). Now expanding to include a product catalogue with upload functionality and pricing/rates management.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Placeholder product image for Men's Wear clothing category card, warm saffron and maroon tones, fabric texture feel (mens-wear-placeholder.dim_400x400.png)\n- Placeholder product image for Women's Wear clothing category card, warm gold and maroon tones, elegant saree/ethnic fabric (womens-wear-placeholder.dim_400x400.png)\n- Placeholder product image for Kids' Wear clothing category card, bright warm tones, cheerful traditional fabric pattern (kids-wear-placeholder.dim_400x400.png)\n- Placeholder product image for Traditional/Ethnic Wear clothing category card, rich deep maroon and gold embroidery pattern (ethnic-wear-placeholder.dim_400x400.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-hero-section-displaying-the-business-name-om-collection-a-tagline-about-quality-clothing-and-a-call-to-action-button-e-g-explore-collection-include-the-business-location-baramkela-chhattisgarh-india-pin-496551",
+      "title": "Create a homepage hero section displaying the business name 'OM COLLECTION', a tagline about quality clothing, and a call-to-action button (e.g., 'Explore Collection'). Include the business location: Baramkela, Chhattisgarh, India – PIN 496551.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-featured-collections-or-our-products-section-showcasing-categories-of-clothing-e-g-men-s-wear-women-s-wear-kids-wear-traditional-ethnic-wear-with-placeholder-product-cards-including-a-name-and-price-label",
+      "title": "Create a 'Featured Collections' or 'Our Products' section showcasing categories of clothing (e.g., Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear) with placeholder product cards including a name and price label.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-about-us-section-describing-om-collection-as-a-trusted-cloth-business-in-baramkela-chhattisgarh-highlighting-quality-products-and-local-service",
+      "title": "Add an 'About Us' section describing OM COLLECTION as a trusted cloth business in Baramkela, Chhattisgarh, highlighting quality products and local service.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-us-section-with-the-business-address-baramkela-chhattisgarh-india-pin-496551-and-placeholder-fields-for-name-phone-number-and-message-with-a-submit-button",
+      "title": "Add a 'Contact Us' section with the business address (Baramkela, Chhattisgarh, India – PIN 496551) and placeholder fields for name, phone number, and message with a submit button.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-responsive-navigation-bar-with-the-om-collection-brand-name-logo-and-links-to-page-sections-home-collections-about-contact",
+      "title": "Add a responsive navigation bar with the 'OM COLLECTION' brand name/logo and links to page sections: Home, Collections, About, Contact.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-the-business-name-om-collection-location-baramkela-chhattisgarh-india-496551-and-a-short-copyright-notice",
+      "title": "Add a footer with the business name 'OM COLLECTION', location (Baramkela, Chhattisgarh, India – 496551), and a short copyright notice.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-warm-elegant-visual-theme-inspired-by-indian-textile-traditions-use-rich-saffron-gold-and-deep-maroon-as-primary-colors-clean-serif-or-stylized-typography-and-a-layout-that-evokes-a-premium-traditional-cloth-store-feel-apply-this-theme-consistently-across-all-sections",
+      "title": "Apply a warm, elegant visual theme inspired by Indian textile traditions — use rich saffron/gold and deep maroon as primary colors, clean serif or stylized typography, and a layout that evokes a premium traditional cloth store feel. Apply this theme consistently across all sections.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-generated-static-image-assets-from-frontend-public-assets-generated-throughout-the-site-hero-banner-product-category-placeholder-images",
+      "title": "Render generated static image assets from frontend/public/assets/generated throughout the site (hero banner, product category placeholder images).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-catalogue-page-displaying-all-products-from-the-backend-in-a-responsive-grid-each-product-card-must-show-the-product-image-name-category-badge-and-price-in-indian-rupees-the-page-must-include-filter-sort-controls-by-category-style-consistently-with-the-existing-warm-saffron-gold-and-maroon-theme",
+      "title": "Build a Catalogue page displaying all products from the backend in a responsive grid. Each product card must show the product image, name, category badge, and price in Indian Rupees (₹). The page must include filter/sort controls by category. Style consistently with the existing warm saffron/gold and maroon theme.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-admin-upload-page-accessible-via-a-link-in-the-navigation-bar-with-a-form-to-add-a-new-product-to-the-catalogue-the-form-must-include-fields-for-product-name-category-dropdown-price-in-numeric-input-image-url-and-description-on-submission-call-the-backend-addproduct-function-and-refresh-the-catalogue-include-basic-client-side-validation-all-fields-required-price-must-be-a-positive-number",
+      "title": "Add an Admin Upload page (accessible via a link in the navigation bar) with a form to add a new product to the catalogue. The form must include fields for: Product Name, Category (dropdown), Price in ₹ (numeric input), Image URL, and Description. On submission, call the backend addProduct function and refresh the catalogue. Include basic client-side validation (all fields required, price must be a positive number).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-navigation-link-to-the-catalogue-page-in-the-existing-responsive-navigation-bar-alongside-the-existing-home-collections-about-and-contact-links",
+      "title": "Add a navigation link to the 'Catalogue' page in the existing responsive navigation bar, alongside the existing Home, Collections, About, and Contact links.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Business website for OM COLLECTION cloth store with location info (Baramkela, Chhattisgarh, PIN 496551)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Product catalogue page displaying items with images and rates/prices",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Upload functionality to add new products to the catalogue with name, image, and rate/price",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data model and API for products, each with fields: id, name, category (e.g. Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear), price (Nat), imageUrl (Text), and description (Text). Implement CRUD operations: addProduct, getProducts, getProductById, updateProduct, deleteProduct.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "OM COLLECTION",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

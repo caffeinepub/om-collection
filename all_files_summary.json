@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Motoko actor defining a clothing store backend with CRUD operations for products (add, get, update, delete) and query helpers for filtering by category and sorting by price or name.",
+  "feature_evidence.json": "Feature evidence report mapping three implemented features (Catalogue page, Admin Upload page, Navigation link) to their source files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document providing one-sentence summaries of each frontend source file, serving as a quick reference for the project's frontend structure.",
+  "frontend/index.css": "Tailwind base CSS file defining OKLCH-based CSS custom properties for light and dark color themes used throughout the UI.",
+  "frontend/index.html": "Minimal HTML entry point for the React app, mounting the root div and loading the main TypeScript module for the OM COLLECTION app.",
+  "frontend/src/App.tsx": "Root React component that sets up TanStack Router with routes for Home (/), Catalogue (/catalogue), and AddProduct (/add-product), wrapped in a shared Navigation and Footer layout.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying brand info, physical address in Baramkela, Chhattisgarh, quick navigation links, copyright, and a caffeine.ai attribution link.",
+  "frontend/src/components/Navigation.tsx": "Sticky responsive navigation bar with the OM COLLECTION logo, desktop and mobile menus, active route highlighting, and an Add Product button linking to /add-product.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card component that displays a product image with fallback, a color-coded category badge, name, description excerpt, and price formatted in Indian Rupees.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and provider, exposing login/logout functions, identity state, and login status via a React context and custom hook.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for all backend product operations (get, filter, sort, add, update, delete) using the actor from useActor.",
+  "frontend/src/index.css": "Global stylesheet that imports Google Fonts, sets up Tailwind CSS, and defines a saffron/gold/maroon brand color palette with custom CSS variables and utility classes for both light and dark modes.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/pages/AddProduct.tsx": "Admin page with a validated form for adding a new product, supporting fields for name, category, price, image URL, and description, with image preview and success/error feedback.",
+  "frontend/src/pages/Catalogue.tsx": "Product catalogue page that fetches all products and provides client-side filtering by category, text search, and sorting by price or name, rendering results as ProductCards.",
+  "frontend/src/pages/Home.tsx": "The main Home page component for OM COLLECTION, rendering a hero section, clothing category cards (Men's, Women's, Kids', Ethnic Wear), and additional sections like About and Contact using TanStack Router for navigation.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom brand colors (saffron, gold, maroon, cream), Playfair Display/Lato fonts, card shadows, and fade/accordion animations, plus typography, container-queries, and animate plugins.",
+  "project_state.json": "Project state metadata for the OM COLLECTION website, tracking schema version, existing features, image requirements, and architectural notes for a cloth business site with catalogue and pricing functionality."
+}

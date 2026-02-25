@@ -1,0 +1,12 @@
+{
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring saffron/gold and deep maroon palette, Google Fonts import for Playfair Display (serif) and Lato (sans), and custom brand utility classes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom brand colors (saffron, gold, maroon, cream), Playfair Display/Lato font families, card shadow variants, and fade-in animation.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations — getProducts, getProductsByCategory, getSortedByPrice/Name, addProduct, updateProduct, deleteProduct — with proper cache invalidation.",
+  "frontend/src/App.tsx": "Root app component with TanStack Router setup, defining routes for Home (/), Catalogue (/catalogue), and AddProduct (/add-product), wrapped in a layout with Navigation and Footer.",
+  "frontend/src/components/Navigation.tsx": "Sticky responsive navigation bar with OM COLLECTION branding, links to all pages/sections, mobile hamburger menu, and active route highlighting in the maroon/saffron theme.",
+  "frontend/src/components/Footer.tsx": "Full footer with brand info, address (Baramkela, Chhattisgarh, PIN 496551), quick links, copyright notice, and caffeine.ai attribution with UTM tracking.",
+  "frontend/src/components/ProductCard.tsx": "Reusable product card displaying image with fallback, category badge with color coding, product name, description excerpt, and price formatted in Indian Rupees (₹).",
+  "frontend/src/pages/Home.tsx": "Full homepage with hero banner, featured collections grid, about section with stats, and contact form — all styled in the saffron/maroon theme.",
+  "frontend/src/pages/Catalogue.tsx": "Catalogue page fetching all products from the backend, with search, category filter pills, sort dropdown, responsive product grid, and empty/loading/error states.",
+  "frontend/src/pages/AddProduct.tsx": "Add Product form page with fields for name, category, price, image URL, and description; includes client-side validation, image preview, inline error messages, and success/error banners."
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-catalogue-page-displaying-all-products-from-the-backend-in-a-responsive-grid-each-product-card-must-show-the-product-image-name-category-badge-and-price-in-indian-rupees-the-page-must-include-filter-sort-controls-by-category-style-consistently-with-the-existing-warm-saffron-gold-and-maroon-theme",
+      "featureTitle": "Build a Catalogue page displaying all products from the backend in a responsive grid. Each product card must show the product image, name, category badge, and price in Indian Rupees (₹). The page must include filter/sort controls by category. Style consistently with the existing warm saffron/gold and maroon theme.",
+      "files": [
+        "frontend/src/components/ProductCard.tsx",
+        "frontend/src/pages/Catalogue.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-admin-upload-page-accessible-via-a-link-in-the-navigation-bar-with-a-form-to-add-a-new-product-to-the-catalogue-the-form-must-include-fields-for-product-name-category-dropdown-price-in-numeric-input-image-url-and-description-on-submission-call-the-backend-addproduct-function-and-refresh-the-catalogue-include-basic-client-side-validation-all-fields-required-price-must-be-a-positive-number",
+      "featureTitle": "Add an Admin Upload page (accessible via a link in the navigation bar) with a form to add a new product to the catalogue. The form must include fields for: Product Name, Category (dropdown), Price in ₹ (numeric input), Image URL, and Description. On submission, call the backend addProduct function and refresh the catalogue. Include basic client-side validation (all fields required, price must be a positive number).",
+      "files": [
+        "frontend/src/pages/AddProduct.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-navigation-link-to-the-catalogue-page-in-the-existing-responsive-navigation-bar-alongside-the-existing-home-collections-about-and-contact-links",
+      "featureTitle": "Add a navigation link to the 'Catalogue' page in the existing responsive navigation bar, alongside the existing Home, Collections, About, and Contact links.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

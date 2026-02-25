@@ -1,0 +1,79 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T22:41:51.139Z",
+  "summary": "The diff implements the four main requirements (REQ-9 through REQ-12) with good coverage. The backend CRUD API is present in backend/main.mo, the Catalogue page is built, the AddProduct form is implemented, and navigation links are added. However, there are some gaps: stable memory persistence is not explicitly implemented (no stable var or stable Map), and the required placeholder images are missing from the diff.",
+  "missing_requirements": [
+    {
+      "id": "REQ-9",
+      "requirement": "Products are stored persistently in stable memory on the canister.",
+      "reason": "The backend uses 'var nextId = 0' and 'let products = Map.empty<Nat, Product>()' without the stable keyword or explicit stable memory mechanism, so data would not survive canister upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Additional backend query functions: getProductsByCategory, getProductsSortedByPrice, getProductsSortedByName",
+      "reason": "These three extra query endpoints were not requested in the build spec. The spec only required addProduct, getProducts, getProductById, updateProduct, and deleteProduct.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Product category 'Accessories' added to both backend type and frontend UI",
+      "reason": "The build request only specifies four categories: Men's Wear, Women's Wear, Kids' Wear, and Traditional/Ethnic Wear. An 'Accessories' category was added beyond the spec.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/pages/AddProduct.tsx",
+        "frontend/src/pages/Catalogue.tsx",
+        "frontend/src/components/ProductCard.tsx"
+      ]
+    },
+    {
+      "description": "Search functionality with a text search box on the Catalogue page",
+      "reason": "The build request for REQ-10 only requires filter/sort controls by category. A free-text search input was added which was not requested.",
+      "evidence": [
+        "frontend/src/pages/Catalogue.tsx"
+      ]
+    },
+    {
+      "description": "Image preview panel on the AddProduct form",
+      "reason": "REQ-11 only requires an Image URL input field. A live image preview feature was added beyond the specification.",
+      "evidence": [
+        "frontend/src/pages/AddProduct.tsx"
+      ]
+    },
+    {
+      "description": "Sort options beyond category filtering on the Catalogue page",
+      "reason": "REQ-10 specifies filter/sort controls by category only. Multiple sort options (price asc/desc, name A-Z) were added beyond the spec.",
+      "evidence": [
+        "frontend/src/pages/Catalogue.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/ProductCard.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AddProduct.tsx",
+    "frontend/src/pages/Catalogue.tsx",
+    "frontend/src/pages/Home.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

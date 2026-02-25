@@ -1,0 +1,109 @@
+{
+  "kind": "build_request",
+  "title": "Product Catalogue with Upload & Rates Management",
+  "projectName": "OM Collection",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Create a backend data model and API for products, each with fields: id, name, category (e.g. Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear), price (Nat), imageUrl (Text), and description (Text). Implement CRUD operations: addProduct, getProducts, getProductById, updateProduct, deleteProduct.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "create an app showing catelogue were i can also upload with rates"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Products are stored persistently in stable memory on the canister.",
+        "addProduct accepts all required fields and returns the new product id.",
+        "getProducts returns all stored products.",
+        "updateProduct allows editing name, category, price, imageUrl, and description.",
+        "deleteProduct removes a product by id."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Build a Catalogue page displaying all products from the backend in a responsive grid. Each product card must show the product image, name, category badge, and price in Indian Rupees (₹). The page must include filter/sort controls by category. Style consistently with the existing warm saffron/gold and maroon theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "create an app showing catelogue were i can also upload with rates"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All products fetched from the backend are displayed in a card grid.",
+        "Each card shows product image, name, category, and price (₹).",
+        "Filtering by category (All, Men's Wear, Women's Wear, Kids' Wear, Traditional/Ethnic Wear) works correctly.",
+        "Layout is responsive across mobile, tablet, and desktop.",
+        "Visual theme matches the existing saffron/gold and maroon palette."
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Add an Admin Upload page (accessible via a link in the navigation bar) with a form to add a new product to the catalogue. The form must include fields for: Product Name, Category (dropdown), Price in ₹ (numeric input), Image URL, and Description. On submission, call the backend addProduct function and refresh the catalogue. Include basic client-side validation (all fields required, price must be a positive number).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "i can also upload with rates"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Upload form is accessible from the navigation bar (e.g., 'Add Product' link).",
+        "All required fields are present: Name, Category, Price, Image URL, Description.",
+        "Submitting a valid form calls the backend and adds the product.",
+        "The catalogue reflects the newly uploaded product without a full page reload.",
+        "Validation errors are shown inline if required fields are empty or price is invalid.",
+        "Success confirmation message is displayed after a successful upload."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add a navigation link to the 'Catalogue' page in the existing responsive navigation bar, alongside the existing Home, Collections, About, and Contact links.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "create an app showing catelogue"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Catalogue' link appears in the navigation bar.",
+        "Clicking the link navigates to the Catalogue page.",
+        "The navigation bar remains responsive and correctly styled on all screen sizes."
+      ]
+    }
+  ],
+  "constraints": [
+    "All Motoko logic must remain in a single actor in backend/main.mo.",
+    "Do not modify any files listed in frontend.immutablePaths.",
+    "Visual theme must remain consistent with the existing saffron/gold and deep maroon palette established in prior features.",
+    "Prices must be displayed in Indian Rupees (₹)."
+  ],
+  "nonGoals": [
+    "Payment gateway or checkout functionality.",
+    "User authentication or role-based access control for the admin upload page.",
+    "Real file/image upload (binary) — image URL input is sufficient.",
+    "Order management or inventory tracking.",
+    "External database integration."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Placeholder product image for Men's Wear clothing category card, warm saffron and maroon tones, fabric texture feel (mens-wear-placeholder.dim_400x400.png)",
+      "Placeholder product image for Women's Wear clothing category card, warm gold and maroon tones, elegant saree/ethnic fabric (womens-wear-placeholder.dim_400x400.png)",
+      "Placeholder product image for Kids' Wear clothing category card, bright warm tones, cheerful traditional fabric pattern (kids-wear-placeholder.dim_400x400.png)",
+      "Placeholder product image for Traditional/Ethnic Wear clothing category card, rich deep maroon and gold embroidery pattern (ethnic-wear-placeholder.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}
